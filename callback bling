@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionamento OAuth</title>
+</head>
+<body>
+    <h1>Redirecionamento OAuth</h1>
+    <p id="auth-code">Código de Autorização: <span id="code"></span></p>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        document.getElementById("code").textContent = code ? code : "Nenhum código recebido";
+    </script>
+</body>
+</html>
